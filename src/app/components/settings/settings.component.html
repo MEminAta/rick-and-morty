@@ -1,0 +1,18 @@
+<dx-popup [width]="250" [height]="220" [showTitle]="false" [dragEnabled]="false" [hideOnOutsideClick]="true" [showCloseButton]="false" [(visible)]="isOpen" (visibleChange)="emitter()">
+  <dxo-position at="center" my="center"></dxo-position>
+  <div *dxTemplate="let data of 'content'">
+    <h4>Ayarlar</h4>
+    <hr />
+    <div class="container">
+      <h6>Tema Ayarları</h6>
+      <div class="d-flex">
+        <div class="col">
+          <dx-radio-group [items]="themePrimaryColorNames" (onValueChanged)="themeChange()" [(value)]="themePrimaryColorName"></dx-radio-group>
+        </div>
+        <div class="col">
+          <dx-radio-group [items]="themeSecondaryColorNames" (onValueChanged)="themeChange()" [(value)]="themeSecondaryColorName"></dx-radio-group>
+        </div>
+      </div>
+    </div>
+  </div>
+</dx-popup>

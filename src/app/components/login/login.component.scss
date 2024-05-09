@@ -1,0 +1,9 @@
+.login-card {
+  width: 300px;
+}
+
+dx-text-box:hover {
+  .editor-button-color {
+    color: rgb(var(--dynamic-border-shadow-color), var(--dynamic-border-shadow-color), var(--dynamic-border-shadow-color));
+  }
+}

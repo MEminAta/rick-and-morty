@@ -1,0 +1,36 @@
+<div class="ms-1 mt-1" [style.font-size.px]="fontSize">
+  <div>sayko&#64;jengal.com</div>
+  <div>Sayko34</div>
+</div>
+<form (submit)="login($event)">
+  <div class="center">
+    <div class="my-card login-card p-4">
+      <div class="head-font text-center">Login</div>
+      <hr class="my-3" />
+      <div class="mb-3">
+        <dx-text-box label="Email" placeholder="Enter your email" mode="email" [(value)]="loginDto.mail">
+          <dx-validator>
+            <dxi-validation-rule type="email" message="Email wrong"></dxi-validation-rule>
+            <dxi-validation-rule type="required" message="Email required"></dxi-validation-rule>
+          </dx-validator>
+        </dx-text-box>
+      </div>
+      <div class="mb-3">
+        <dx-text-box #passwordTextBox label="Şifre" placeholder="Enter your password" [mode]="passwordButtonMode" [(value)]="loginDto.password">
+          <dxi-button name="today" location="after" [options]="passwordButton">
+            <div class="editor-detail-color" *dxTemplate="let cellInfo of 'textBoxButtonTemplate'">
+              <em class="fa {{ passwordButtonMode === 'text' ? 'fa-eye-slash' : 'fa-eye' }}"></em>
+            </div>
+          </dxi-button>
+          <dx-validator>
+            <dxi-validation-rule type="required" message="Password required"></dxi-validation-rule>
+          </dx-validator>
+        </dx-text-box>
+        <div class="d-flex justify-content-end">
+          <div class="pointer mt-3" (click)="infoFontSizeUp()" (keydown)="infoFontSizeUp()">Şifreni mi unuttun?</div>
+        </div>
+      </div>
+      <dx-button class="w-100" type="default" text="Login" [useSubmitBehavior]="true"></dx-button>
+    </div>
+  </div>
+</form>

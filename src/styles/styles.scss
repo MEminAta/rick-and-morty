@@ -1,0 +1,55 @@
+@import "./schema/elements";
+@import "./schema/main";
+
+:root {
+  --dynamic-primary-color: "";
+  --dynamic-primary-tone-color: "";
+  --dynamic-secondary-tone-color: "";
+  --dynamic-text-color: "";
+  --dynamic-border-shadow-color: "";
+}
+
+a {
+  color: var(--dynamic-text-color);
+  text-decoration: none;
+}
+
+.character-card {
+  border: 1px solid var(--dynamic-text-color);
+  margin: 1rem 0;
+  position: relative;
+  border-radius: 10px;
+
+  .character-image {
+    width: 100%;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px 10px 0 0;
+    }
+  }
+
+  .character-status {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-weight: bold;
+    padding: 0.3rem .6rem;
+    border-radius: 10px;
+    z-index: 10;
+  }
+
+  .alive {
+    background-color: green;
+  }
+
+  .dead {
+    background-color: red;
+  }
+
+  .unknown {
+    background-color: grey;
+  }
+}

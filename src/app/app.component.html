@@ -1,0 +1,14 @@
+<div *ngIf="isLogged">
+  <app-navbar />
+  <div class="container-fluid">
+    <div class="row">
+      <app-sidebar />
+      <main class="col">
+        <router-outlet />
+      </main>
+    </div>
+  </div>
+</div>
+
+<app-login *ngIf="!isLogged" />
+<app-loading-bar *ngIf="waitingRequestCount !== 0" />

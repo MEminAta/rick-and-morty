@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-md-3 col-12">
+    Name
+    <dx-text-box [(value)]="characterFilterModel.name" (onValueChanged)="onQueryChange()"></dx-text-box>
+  </div>
+  <div class="col-md-3 col-6">
+    Species
+    <dx-text-box [(value)]="characterFilterModel.species" (onValueChanged)="onQueryChange()"></dx-text-box>
+  </div>
+  <div class="col-md-3 col-6">
+    Gender
+    <dx-select-box [dataSource]="['', 'Female', 'Male', 'Genderless', 'Unknown']" [(value)]="characterFilterModel.gender" (onValueChanged)="onQueryChange()"></dx-select-box>
+  </div>
+  <div class="col-md-3 col-6">
+    Status
+    <dx-select-box [dataSource]="['', 'alive', 'dead', 'unknown']" [(value)]="characterFilterModel.status" (onValueChanged)="onQueryChange()"></dx-select-box>
+  </div>
+</div>

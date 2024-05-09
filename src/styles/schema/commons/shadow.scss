@@ -1,0 +1,5 @@
+.shadow {
+  box-shadow: rgba(var(--dynamic-border-shadow-color), var(--dynamic-border-shadow-color), var(--dynamic-border-shadow-color), 0.25) 0 54px 55px, rgba(var(--dynamic-border-shadow-color), var(--dynamic-border-shadow-color), var(--dynamic-border-shadow-color), 0.12) 0px -12px 30px, rgba(var(--dynamic-border-shadow-color), var(--dynamic-border-shadow-color), var(--dynamic-border-shadow-color), 0.12) 0px 4px 6px, rgba(var(--dynamic-border-shadow-color), var(--dynamic-border-shadow-color), var(--dynamic-border-shadow-color), 0.17) 0px 12px 13px, rgba(var(--dynamic-border-shadow-color), var(--dynamic-border-shadow-color), var(--dynamic-border-shadow-color), 0.09) 0px -3px 5px !important;
+}
+
+// Hover before vb. css komutlarında, scss'in @extend komutunu burayı import ederek çalıştırabilirsiniz

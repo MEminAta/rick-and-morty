@@ -1,0 +1,21 @@
+<div class="container mt-5" *ngIf="character !== undefined">
+  <div class="row justify-content-center">
+    <div class="col-md-5">
+      <div class="my-card character-card">
+        <div class="character-status {{ character!.status.toLowerCase() }}">{{ character!.status }}</div>
+        <div class="character-image">
+          <img [src]="character!.image" alt="{{ character!.name }}" />
+        </div>
+        <div class="p-1">
+          <h5 class="p-1">{{ character!.name }}</h5>
+          <hr class="my-1" />
+          <div class="p-1"><b>Species:</b> {{ character!.species }}</div>
+          <div class="p-1"><b>Gender:</b> {{ character!.gender }}</div>
+          <div class="p-1"><b>Type:</b> {{ character!.type || "-" }}</div>
+          <div class="p-1"><b>Origin:</b> {{ character!.origin.name }}</div>
+          <div class="p-1"><b>Location:</b> {{ character!.location.name || "-" }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

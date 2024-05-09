@@ -1,0 +1,38 @@
+
+.sidebar {
+  width: 160px;
+  position: fixed;
+  top: 56px;
+  bottom: 0;
+  left: 0;
+  z-index: 100; /* Sidebar'ın içeriği sayfa içeriğinin üstünde olmalı */
+  padding: 12px 0; /* Yukarıdaki menü için boşluk bırakır */
+  background-color: var(--dynamic-primary-tone-color) !important;
+}
+
+.sidebar-sticky {
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px); /* Yukarıdaki menü ve alttaki menü için alanı ayarlar */
+  padding-top: .5rem;
+  overflow-x: hidden;
+  overflow-y: auto; /* Uzun menüler için kaydırma ekler */
+}
+
+@media (max-width: 575.98px) {
+  .sidebar {
+    width: 55px !important;
+  }
+}
+
+.nav-link {
+  color: var(--dynamic-text-color) !important;
+}
+
+.navbar-brand{
+  color: var(--dynamic-text-color) !important;
+}
+
+i{
+  width: 20px;
+}

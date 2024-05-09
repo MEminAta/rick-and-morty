@@ -1,0 +1,15 @@
+@import "./schema/commons/shadow";
+
+.navbar {
+  z-index: 99;
+  background-color: var(--dynamic-primary-tone-color) !important;
+  @extend .shadow;
+
+  .nav-link {
+    color: var(--dynamic-text-color) !important;
+  }
+
+  .navbar-brand {
+    color: var(--dynamic-text-color) !important;
+  }
+}
