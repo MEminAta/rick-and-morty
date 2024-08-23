@@ -69,7 +69,6 @@ export class HomeComponent implements OnInit {
     data.page = 1;
     this.characterFilter = data;
 
-    console.log(data);
     this.fetchCharacters().subscribe(data => {
       this.characters = data;
     });
